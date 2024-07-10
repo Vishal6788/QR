@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scanned QR Code</title>
+    <script>
+        function displayRandomString() {
+            const strings = ["Scanned Product is to be placed in Transmitters", "Scanned Product is to be placed in Transducers", "Scanned Product is to be placed in CV Spares", "Scanned Product is to be placed in Check Valve"];
+            const randomIndex = Math.floor(Math.random() * strings.length);
+            const selectedString = strings[randomIndex];
+            document.getElementById("randomString").innerText = selectedString;
+        }
+    </script>
+</head>
+<body>
+    <h1>Product Category by Scanned QR</h1>
+    <button onclick="displayRandomString()">Show Category</button>
+    <p id="randomString"></p>
+</body>
+</html>
